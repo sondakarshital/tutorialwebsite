@@ -1,0 +1,27 @@
+<div class="example">
+<p>
+  Let's start with first nodeJs Example.<br><br>
+  app/firstNodeJsExample.js <br><br>
+
+<mat-card>
+  var express = require('express');<br><br>
+var app= express();<br><br>
+var bodyParser = require('body-parser')<br><br>
+var cors = require('cors')<br><br>
+//Functions to get and post videos<br><br>
+var getVideos =require('./routes/videos/getVideos.js');<br><br>
+var postVideos =require('./routes/videos/postVideos.js');<br><br>
+//used for CORS Support<br><br>
+app.use(cors());<br><br>
+//Gtes the videos<br><br>
+app.get('/getVideos',getVideos.getVideos);<br><br>
+
+//posts the videos<br><br>
+app.post('/postVideos', postVideos.postVideos);<br><br><br><br><br><br>
+
+<!-- <p> app.listen(3000, () => {</p>
+  console.log('Listenning at http://localhost:3000' )<br><br>
+})<br><br></pre> -->
+</mat-card>
+</p>
+</div>
