@@ -1,15 +1,21 @@
 
-  <mat-toolbar>ConfusedTechMinds
-    <span class="spacer"></span>
-      <a routerLink='/nodeJs' routerLinkActive="active">NodeJs</a><br/>
-      <a routerLink='/expressJs' routerLinkActive="active">ExpressJs</a><br/>
-      <a routerLink='/javascript' routerLinkActive="active">Javascript</a><br/>
-      <a routerLink='/angularJs' routerLinkActive="active">AngularJs</a><br/>
+  <mat-toolbar>
+    <div class="logo">ConfusedTechMinds</div>
+    <div class="profile">
+      <a routerLink='/about' routerLinkActive="active">About author</a>
+   </div>
+    <!-- <span class="spacer"></span> -->
+    <div class="menudiv">
+      <a routerLink='/nodeJs' routerLinkActive="active">NodeJs</a>
+      <a routerLink='/expressJs' routerLinkActive="active">ExpressJs</a>
+      <a routerLink='/javascript' routerLinkActive="active">Javascript</a>
+      <a routerLink='/angularJs' routerLinkActive="active">AngularJs</a>
+    </div>
     </mat-toolbar>
     <router-outlet></router-outlet>
     <!--Scroll to top-->
   <button [ngClass]="{'show-scroll': navIsFixed}" (click)="scrollToTop()" class="scroll-to-top">
       <mat-icon>arrow_upward</mat-icon>
   </button>
-    <mat-card class="footer">Developed and maintained by @ConfusedTechMinds</mat-card>
+    <mat-card class="footer">Developed and maintained by @ConfusedTechMinds.com</mat-card>
 

@@ -5,6 +5,7 @@ a[_ngcontent-c0] {
     margin-left: 10px;
     text-decoration: none;
     color: antiquewhite;
+    font-family: cursive;
 }
 .mat-toolbar-row, .mat-toolbar-single-row {
     background-color: lightcoral;
@@ -15,7 +16,7 @@ a[_ngcontent-c0] {
 }
   .footer{
     background-color: floralwhite;
-    color: black;
+    color: darkcyan;
     //font-size: 149%;
     text-align: center;
     bottom: 0px;
@@ -46,6 +47,16 @@ a[_ngcontent-c0] {
     transition: all .2s ease-in-out;
 }
 a{
-  margin-left: 10px;
+  margin-left: 15px;
   text-decoration: none;
 }
+.menudiv {
+    display: block;
+    margin-left: 10%;
+}
+.profile{
+   margin-left: 2%;
+  }
+  .logo{
+        font-family: sans-serif;
+  }

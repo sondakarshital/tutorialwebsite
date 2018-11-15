@@ -16,6 +16,8 @@ import { ThirdTutorialComponent } from './node/third-tutorial/third-tutorial.com
 import { ExpressJsComponent } from './express-js/express-js.component';
 import { JavascriptComponent } from './javascript/javascript.component';
 import { AngularjsComponent } from './angularjs/angularjs.component';
+import { AboutComponent } from './about/about.component';
+
 
 
 @NgModule({
@@ -28,6 +30,7 @@ import { AngularjsComponent } from './angularjs/angularjs.component';
     ExpressJsComponent,
     JavascriptComponent,
     AngularjsComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
