@@ -1,0 +1,9 @@
+.previous{
+    color: red;
+    text-decoration: none;
+}
+.next{
+    color: green;
+    float: right;
+    text-decoration: none;
+}

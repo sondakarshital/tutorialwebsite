@@ -1,0 +1,44 @@
+<div>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="!(isHandset$ | async)">
+    <mat-toolbar>
+    <img src="../../assets/images/about.png" alt="profile picture" class="rounded">
+    </mat-toolbar>
+    <mat-nav-list>
+      <mat-divider></mat-divider>
+      <a mat-list-item routerLink='/home' routerLinkActive="active">Home</a>
+      <mat-divider></mat-divider>
+      <mat-divider></mat-divider>
+      <a mat-list-item routerLink='/nodeJs' routerLinkActive="active">NodeJs</a>
+      <mat-divider></mat-divider>
+      <a mat-list-item routerLink='/expressJs' routerLinkActive="active">ExpressJs</a>
+      <mat-divider></mat-divider>
+      <a mat-list-item routerLink='/javascript' routerLinkActive="active">Javascript</a>
+      <mat-divider></mat-divider>
+      <a mat-list-item routerLink='/angularJs' routerLinkActive="active">AngularJs</a>
+      <mat-divider></mat-divider>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <a routerLink='/about'>
+      <span>ConfusedTechMinds</span>
+      </a>
+    </mat-toolbar>
+      <!-- Add Content Here -->
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+</div>
+ 

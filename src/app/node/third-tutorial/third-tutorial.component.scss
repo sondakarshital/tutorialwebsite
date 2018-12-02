@@ -1,6 +1,6 @@
 .example{
     margin-left: 10%;
-    line-height: 120%;
+    line-height: 150%;
     font-size: 130%;
     margin-right: 10%;
 }
@@ -14,13 +14,25 @@ h2 {
     color: blue;
     font-family: cursive
 }
+.output{
+    color: crimson;
+    font-family: cursive
+}
 a{
 link {color:#ff0000;}
 a.visited {color:#0000ff;}
 a.hover {font-size:150%;}
 }
-.mat-card {
-    background: cyan;
-    color: rgba(0,0,0,.87);
-    position: unset;
+
+.fixed{
+    position: relative;
+}
+.previous{
+    color: red;
+    text-decoration: none;
+}
+.next{
+    color: green;
+    float: right;
+    text-decoration: none;
 }

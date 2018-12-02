@@ -1,3 +1,5 @@
+import { HomeComponent } from './home/home.component';
+import { ExpressRoutingModule } from './express-js/express-js-routing.module';
 import { NodeRoutingModule } from './node/node-routing.module';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -17,6 +19,12 @@ import { ExpressJsComponent } from './express-js/express-js.component';
 import { JavascriptComponent } from './javascript/javascript.component';
 import { AngularjsComponent } from './angularjs/angularjs.component';
 import { AboutComponent } from './about/about.component';
+import { FourthTutorialComponent } from './node/fourth-tutorial/fourth-tutorial.component';
+import { FifthTutorialComponent } from './node/fifth-tutorial/fifth-tutorial.component';
+import { EFirstTutorialComponent } from './express-js/first-tutorial/first-tutorial.component';
+import { ESecondTutorialComponent } from './express-js/second-tutorial/second-tutorial.component';
+import { MainNavComponent } from './main-nav/main-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
 
 
 
@@ -31,6 +39,12 @@ import { AboutComponent } from './about/about.component';
     JavascriptComponent,
     AngularjsComponent,
     AboutComponent,
+    FourthTutorialComponent,
+    FifthTutorialComponent,
+    EFirstTutorialComponent,
+    ESecondTutorialComponent,
+    HomeComponent,
+    MainNavComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,7 +68,9 @@ import { AboutComponent } from './about/about.component';
     MatSortModule,
     MatDialogModule,
     AppRoutingModule,
-    NodeRoutingModule
+    NodeRoutingModule,
+    ExpressRoutingModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

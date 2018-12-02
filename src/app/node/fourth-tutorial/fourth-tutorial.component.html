@@ -1,0 +1,33 @@
+<div class="example">
+  <p>
+  Node JS handle all asynchronous calls via callback. Hey wait, what is callback..?? well, callbacks in the general definition are just functions that you pass to other functions. It is called at the completion of certain task.
+  </p>
+<p>
+  Dose'nt make any sense right!!What is function passing to another funtion!!what’s going on here..?? let me give a simple example of callback
+</p>
+<p>
+  <img src="../../assets/images/nodejs/callback.png" alt="callback example">
+</p>
+<p>
+  fs module is built-in module of Node JS which is used to work with file system of your computer .
+  Here i’m using fs.readFile() function to read file input.txt present in same directory as above code.
+</p>
+<p>
+  Let’s analyse how this code snippet is working. Here we can see that fs.read() function is taking two arguments. 
+  First argument is the path of the file and second argument is a function, which is nothing but a callback function. 
+</p>
+<p>
+  Let’s get into more details of code. First fs.read() will try to find whether the file exists or not, then it will try to get all information about that file. 
+  If it successfully get the file then that data is passed into dataparameter of callback function. If some error happen in the process, that error is passed into errparameter of callback function. After dealing with the path, callback function get invoked.
+</p>
+<p>
+  Note : According to coding convention of Node JS, the first argument in callback function is for an error object and second argument is for a successful response.
+</p>
+<p>
+  Hope this helps to understand nodeJs callback concept!!!!!!!Cheers.. 
+</p>
+<mat-card>
+    <a routerLink='/nodeJs/running-our-first-nodeJs-example' class="previous">Previous</a>
+    <a routerLink='/nodeJs/async-parallel-series-waterfall' class="next">Next</a>
+</mat-card>
+</div>

@@ -2,26 +2,28 @@
 <p>
   Let's start with first nodeJs Example.<br><br>
   app/firstNodeJsExample.js <br><br>
-
-<mat-card>
-  var express = require('express');<br><br>
-var app= express();<br><br>
-var bodyParser = require('body-parser')<br><br>
-var cors = require('cors')<br><br>
-//Functions to get and post videos<br><br>
-var getVideos =require('./routes/videos/getVideos.js');<br><br>
-var postVideos =require('./routes/videos/postVideos.js');<br><br>
-//used for CORS Support<br><br>
-app.use(cors());<br><br>
-//Gtes the videos<br><br>
-app.get('/getVideos',getVideos.getVideos);<br><br>
-
-//posts the videos<br><br>
-app.post('/postVideos', postVideos.postVideos);<br><br><br><br><br><br>
-
-<!-- <p> app.listen(3000, () => {</p>
-  console.log('Listenning at http://localhost:3000' )<br><br>
-})<br><br></pre> -->
-</mat-card>
 </p>
+
+<img src="../../assets/images/nodejs/firstExample.png" alt="first node js example">
+
+<div>
+<p>
+  1.First line of code imports <span class="output">http</span> module by using require keyword and provides http instance. <br><br>
+  2.Line 3 creates node server using http module and returns hello nodejs world! to browser.<br><br>
+</p>
+<h4>Running node example</h4>
+ 1.Go to directory containing firstNodeJsExample.js file and issue <span class="points">node firstNodeJsExample.js</span> command <br><br>
+<h4>Observations</h4>
+<p>
+  1.Once node command is issued it prints Server running at http://127.0.0.1:8080/ in command line. <br><br>
+  2.Now the node sever is running on 8080 port.<br><br>
+  2.Open your favourite browser and hit http://127.0.0.1:8080/ and you will see <span class="output"> hello nodejs world!</span> in a browser.<br><br>
+
+  That's it.We have created our first nodeJs example.
+</p>
+</div>
+<mat-card>
+    <a routerLink='/nodeJs/setting-up-nodejs-environment' class="previous">Previous</a>
+    <a routerLink='/nodeJs/callbacks-in-nodejs' class="next">Next</a>
+</mat-card>
 </div>

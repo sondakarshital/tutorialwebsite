@@ -1,0 +1,26 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+    background: darkcyan;
+    color: #e4d6d6;
+}
+img.rounded {
+    height: -webkit-fill-available;
+    width: inherit;
+    border-radius: 15%;
+}
+  a{
+     text-decoration: none;
+     color: darkturquoise;
+     font-size: larger;
+}

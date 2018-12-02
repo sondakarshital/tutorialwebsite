@@ -1,3 +1,4 @@
+import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { AngularjsComponent } from './angularjs/angularjs.component';
 import { JavascriptComponent } from './javascript/javascript.component';
@@ -7,7 +8,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-// {path:'',component:HomeComponent},
+{ path: '', redirectTo: 'home', pathMatch: 'full' },
+{ path: 'home', component:HomeComponent},
 {path:'about',component:AboutComponent},
 {path:'nodeJs',component:NodeComponent},
 {path:'expressJs' ,component:ExpressJsComponent},
