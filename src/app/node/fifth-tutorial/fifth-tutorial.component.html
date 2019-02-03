@@ -1,3 +1,81 @@
-<p>
-  fifth-tutorial works!
-</p>
+<div class="example">
+  <h2>Async parallel ,series ,waterfall</h2>
+  <p>
+   As an nodejs or javascript developer it's always essential to know about the async capability provided
+   by async module provided by node. In this post we will be going through async parrallel,series,waterfall models. 
+  </p>
+  <p>
+   As i started using async feature of node in the begining failed to understand the exact purpose of this module.
+   Using thease modules frequntly made me understand them better. Let's start with it !!!.
+  </p>
+  
+  <p>
+    <span class="mainPoints"> Need to run multiple tasks that depend on each other and when they all finish do something else.</span><br>
+      In this scenario we have to use async waterfall. Well now how to use this ?.<br>
+  </p> 
+  <p>
+    <span class="mainHeader">async.waterfall()</span><br>
+    We have to require async module in order to use it in our code .Let's do that first.<br>
+    
+    <span class="mainPoints">var async = require('async');<br></span>
+   The syntax for waterfall looks like async.waterfall(tasks, callback), where tasks is an array of functions. 
+   It calls the array of function present in the tasks array one after the other by passing output through callback of first function to the next in the tasks array and so on. 
+   Once the final function in array returns its response without any error , async calls the final function with success response. If error at any point of time while executing functions present in task array immediatly final function with error will be called by skipping successive function calls. 
+    </p>
+   <p>
+     Following code snippet is for async waterfall.
+   </p>
+    <mat-card>
+  <p>
+    <img src="../../assets/images/nodejs/waterfall.png" alt="waterfall example">
+  </p>
+  <p>
+    <span>Output :</span><br>
+    <img src="../../assets/images/nodejs/waterfalloutput.png" alt="waterfall output">
+  </p>
+  </mat-card>
+    <p>
+      <span class="mainHeader">async.series()</span><br>
+    The syntax for series looks like async.series(tasks,callback),where tasks is an array of functions. It calls the array of function present in the tasks array one after the other.if error in any of the functions present in task array, final function with error response will be called else happily final success function is invoked. 
+    The main diffrence between async series and waterfall is, async series is no where dependent on privious function output but the waterfall does. 
+  </p>
+  <mat-card>
+  <p>
+     Following code snippet is for async series.
+   </p>
+  <p>
+    <img src="../../assets/images/nodejs/series.png" alt="series example">
+  </p>
+  <p>
+    <span>Output :</span><br>
+    <img src="../../assets/images/nodejs/seriesoutput.png" alt="series output">
+  </p> 
+</mat-card>
+   <p>
+     <span class="mainHeader">async.parallel()</span><br>    
+    The syntax for parallel looks like async.parallel(tasks, callback), where tasks is an array of functions. It calls all the functions present in task array at a time.Once all the functions in the tasks array are finished their jobs without any error , async calls the final success function. If error in any of the function present in array of tasks immediatly final error function will be called.
+  </p>
+  <mat-card> 
+  <p>
+     Following code snippet is for async parallel.
+   </p>
+  <p>
+    <img src="../../assets/images/nodejs/parallel.png" alt="parallel example">
+  </p>
+  <p>
+    <span>Output :</span><br>
+    <img src="../../assets/images/nodejs/paralleloutput.png" alt="parallel output">
+  </p>
+  </mat-card>
+  <br>
+  <span class="mainPoints">When to use which?</span>
+  <p>
+    <span class="mainHeader">Async Series -</span> when we have a requirenment where we need to call all the funtions in series where each funtion call is independent of each other.
+  </p> 
+  <p>
+    <span class="mainHeader">Async Parallel - </span> we have a requirnment where we need to call all the functions in task array at a time where each function call is independent of other.
+  </p>
+  <p>
+    <span class="mainHeader">Async Waterfall - </span> we have a requirenment where we need to call the funtions one after the other passing output of one funtion as input to the successive funtion in task array.
+  </p>
+</div>

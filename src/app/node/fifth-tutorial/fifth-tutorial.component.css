@@ -7,3 +7,20 @@
     float: right;
     text-decoration: none;
 }
+.example{
+    margin-left: 10%;
+    line-height: 150%;
+    font-size: 130%;
+    margin-right: 10%;
+}
+
+h2 {
+    color:darkslategray;
+    text-shadow: 0px 0px 0px #000000;
+}
+.mainPoints{
+    color: blue;
+}
+.mainHeader{
+    color: maroon;
+}
